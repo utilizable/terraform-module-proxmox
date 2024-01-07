@@ -33,7 +33,7 @@ services:
 
   backend-core:
     <<: *backend
-    hostname: backend 
+    hostname: "${__backend_host}"
     environment:
       MINIO_ROOT_USER: "${backend_access_key}"
       MINIO_ROOT_PASSWORD: "${backend_secret_key}"
