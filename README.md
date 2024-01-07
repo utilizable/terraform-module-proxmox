@@ -1,10 +1,11 @@
 Terraform Module
 ============
-This repository serves as a generic terraform template, enhanced with a Makefile and Docker Compose for streamlined setup and usage.
+This repository serves as a terraform template for proxmox module development.
 
 ## 🪜 Repository Structure
 > [utilizable/github-actions-semver-tagging](https://github.com/utilizable/github-actions-semver-tagging)
 >> [utilizable/terraform-module](https://github.com/utilizable/terraform-module)
+>>> [utilizable/terraform-module-proxmox](https://github.com/utilizable/terraform-module-proxmox)
 
 ## Table of Contents
 - [Requirements](#-requirements)
@@ -43,7 +44,13 @@ Module is based on [example](https://registry.terraform.io/providers/) provider.
 #### Environment Requirements
 ```ini
 # ./build/.env
-...
+
+TF_VAR_provider_proxmox_username="username"
+TF_VAR_provider_proxmox_password="userpass"
+__provider_proxmox_scheme="https"
+__provider_proxmox_host="pve"
+__provider_proxmox_port="8006"
+TF_VAR_provider_proxmox_endpoint="${__provider_proxmox_scheme}://${__provider_proxmox_host}:${__provider_proxmox_port}"
 ```
 ## ⚙️ Configuration
 <sup>[(Back to top)](#table-of-contents)</sup>
