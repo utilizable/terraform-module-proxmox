@@ -1,4 +1,4 @@
-# variables.tf
+# ./variables.tf
 
 # PROVIDER VARIABLES
 # ------------------
@@ -17,4 +17,3 @@ variable "provider_proxmox_endpoint" {
   type        = string
   description = "Proxmox endpoint."
 }
-

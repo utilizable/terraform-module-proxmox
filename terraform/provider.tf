@@ -1,4 +1,7 @@
-# provider.tf
+# ./provider.tf
+
+# CONFIGURATION - PROVIDERS
+# ------------------
 
 provider "proxmox" {
   username = var.provider_proxmox_username
